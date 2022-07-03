@@ -11,8 +11,5 @@ public class MainApplication {
         for(var i : run.getBeanDefinitionNames()) {
             System.out.println(i);
         }
-        var myself = new User("Julian", 18);
-        System.out.println(myself);
-
     }
 }

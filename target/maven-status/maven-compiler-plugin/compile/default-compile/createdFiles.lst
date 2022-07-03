@@ -1,3 +1,4 @@
 com/jlhuang/controller/HelloController.class
 com/jlhuang/MainApplication.class
 com/jlhuang/bean/User.class
+com/jlhuang/mapper/UserMapper.class
