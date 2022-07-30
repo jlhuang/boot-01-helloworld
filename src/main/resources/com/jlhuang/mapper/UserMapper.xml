@@ -22,4 +22,33 @@
             </where>
         </trim>
     </select>
+    <select id="queryAllUser" resultType="User">
+        select * from user
+    </select>
+
+    <update id="updateAllUser" parameterType="list">
+        update user
+        <trim prefix="set" suffixOverrides=",">
+            <trim prefix="name =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.userid!=null">
+                        when userid=#{item.userid}
+                        then #{item.name}
+                    </if>
+                </foreach>
+            </trim>
+            <trim prefix="password =case" suffix="end,">
+                <foreach collection="list" item="item" index="index">
+                    <if test="item.userid!=null">
+                        when userid=#{item.userid}
+                        then #{item.password}
+                    </if>
+                </foreach>
+            </trim>
+        </trim>
+        where userid in
+        <foreach collection="list" item="item" index="index" separator="," open="(" close=")">
+            #{item.userid}
+        </foreach>
+    </update>
 </mapper>

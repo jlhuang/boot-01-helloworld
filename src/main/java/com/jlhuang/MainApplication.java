@@ -1,6 +1,5 @@
 package com.jlhuang;
 
-import com.jlhuang.bean.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
