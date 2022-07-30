@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -38,6 +39,14 @@ public class HelloController {
         List<User> allUser = userService.getAllUser();
         UserListParam userListParam = new UserListParam(allUser);
         model.addAttribute("userListParam",userListParam);
+        List<String> names = new ArrayList<String>();
+        names.add("Jack");
+        names.add("John");
+        names.add("Ben");
+        names.add("Tom");
+        names.add("Monica");
+        names.add("Marry");
+        model.addAttribute("optionNames", names);
         return "edit";
     }
 

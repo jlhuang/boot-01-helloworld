@@ -21,7 +21,11 @@
                     <label th:text="${user.userid}"></label>
                     <input type="hidden" th:field="*{userList[__${itemStat.index}__].userid}"/>
                 </td>
-                <td><input type="text" th:field="*{userList[__${itemStat.index}__].name}"/></td>
+                <td>
+                    <select th:field="*{userList[__${itemStat.index}__].name}">
+                        <option th:each="option : ${optionNames}" th:value="${option}" th:text="${option}" th:selected="${option}==${user.name}"></option>
+                    </select>
+                </td>
                 <td><input type="text" th:field="*{userList[__${itemStat.index}__].password}"/></td>
             </tr>
         </tbody>
