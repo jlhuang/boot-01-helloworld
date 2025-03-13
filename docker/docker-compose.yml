@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: mydb
+      TZ: "Asia/Tokyo"
