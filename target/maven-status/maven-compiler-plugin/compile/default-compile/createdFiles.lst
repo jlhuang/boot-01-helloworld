@@ -1,6 +1,0 @@
-com/jlhuang/bean/User.class
-com/jlhuang/controller/HelloController.class
-com/jlhuang/MainApplication.class
-com/jlhuang/dto/UserSearchRequest.class
-com/jlhuang/mapper/UserMapper.class
-com/jlhuang/service/UserService.class
